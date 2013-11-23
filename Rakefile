@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "rubplayer"
   gem.homepage = "http://github.com/JiriChara/rubplayer"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Lightweight Ruby wrapper for MPlayer}
+  gem.description = %Q{Lightweight Ruby wrappper for Mplayer. It supports playlists, last.fm scrobbling and much more.}
   gem.email = "jirik.chara@gmail.com"
   gem.authors = ["Jiri Chara"]
+  gem.files = Dir.glob('lib/**/*.rb')
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
