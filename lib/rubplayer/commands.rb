@@ -3,9 +3,9 @@ module Rubplayer
     # Load the given file/URL, stopping playback of the current file/URL.
     # If <append> is nonzero playback continues and the file/URL is
     # appended to the current playlist instead.
-    def loadfile(file_or_url, append=false)
+    def loadfile(file, append=false)
       append = append ? 1 : 0
-      enqueue("loadfile #{file} #{append}")
+      enqueue("loadfile \"#{file}\" #{append}")
     end
 
     # Load the given playlist file, stopping playback of the current file.
@@ -13,7 +13,7 @@ module Rubplayer
     # appended to the current playlist instead.
     def loadlist(file, append=false)
       append = append ? 1 : 0
-      enqueue("loadlist #{file} #{append}")
+      enqueue("loadlist \"#{file}\" #{append}")
     end
 
     # Pause/unpause the playback.
@@ -51,6 +51,12 @@ module Rubplayer
     # for the mplayer process (default: 0).
     def quit(value=0)
       enqueue("quit #{value}")
+    end
+
+    # Increase/decrease volume or set it to <value> if [abs] is nonzero.
+    def volume(value, abs=true)
+      abs = abs ? 1 : 0
+      enqueue("volume #{value} #{abs}")
     end
   end
 end

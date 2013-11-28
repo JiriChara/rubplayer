@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 
 gem 'bundler'
 gem 'rake'
-gem 'aasm'
+gem 'workflow'
+gem 'taglib-ruby'
+
+# Documentation
 gem 'yard'
 
+# Testing
 gem 'rspec', :group => [:test, :development]
 
 group :development do

@@ -56,6 +56,7 @@ module Rubplayer
     end
 
     def on(name, &block)
+      @callbacks ||= {}
       (@callbacks[name.to_sym] ||= []) << block
     end
 

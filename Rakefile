@@ -21,7 +21,9 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Lightweight Ruby wrappper for Mplayer. It supports playlists, last.fm scrobbling and much more.}
   gem.email = "jirik.chara@gmail.com"
   gem.authors = ["Jiri Chara"]
-  gem.files = Dir.glob('lib/**/*.rb')
+  gem.files = Dir.glob("{bin,lib,spec}/**/*")
+  gem.executables = ['rubplayer']
+  gem.require_paths = ['lib']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
